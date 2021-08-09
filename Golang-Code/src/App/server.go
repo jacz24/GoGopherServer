@@ -19,7 +19,7 @@ func main() {
 		Port:      443,
 
 		TLS: false,
-		CertFile: "C:/Users/irwin/OneDrive/Documents/GitHub/pokkker.github.io/Cert.pem", // Cert (optional)
+		CertFile: "", // Cert (optional)
 		PrivKeyFile: "", // Enter a PrivKey (optional)
 
 		AdminLogin: "admin",
