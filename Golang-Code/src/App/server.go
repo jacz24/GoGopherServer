@@ -11,15 +11,16 @@ func main() {
 	settings := gopher.ServerSettings{
 		ServerName:     "!s!",
 		MaxConnections: 0,
-
-		HostName:  "https://dijidocs.com/",
-		HostAlias: "https://www.dijidocs.com/",
+		
+		// This should work for localhost. But setting hostname and alias help for WAN
+		HostName:  "", // Enter a Hostname
+		HostAlias: "", // Enter Alias
 		IP:        "0.0.0.0",
 		Port:      443,
 
 		TLS: false,
-		CertFile: "C:/Users/irwin/OneDrive/Documents/GitHub/pokkker.github.io/Cert.pem",
-		PrivKeyFile: "C:/Users/irwin/Sync/MaxResearchDevelopment/pokkker/GopherGameServerEx/Priv.pem",
+		CertFile: "C:/Users/irwin/OneDrive/Documents/GitHub/pokkker.github.io/Cert.pem", // Cert (optional)
+		PrivKeyFile: "", // Enter a PrivKey (optional)
 
 		AdminLogin: "admin",
 		AdminPassword: "admin",
@@ -42,12 +43,6 @@ func main() {
 	openTestTable() // FOR DEBUGGING!
 	gopher.Start(&settings)
 }
-
-func init(){
-
-}
-
-
 
 func openRoom(rName string, rtype string) *core.Room{
 	// Open a Room
